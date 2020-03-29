@@ -86,7 +86,7 @@ More on this in the next section.
 
 Before deploying the linear SVC method, we were eager to evaluate the usefulness of some features.
 To this end, we set up a quick comparison (not using our full pipeline) comparing the results of using the id feature or not.
-As expected, The metrics shown in table \autoref{fig:feature-pre-elim-metrics} demonstrate that the id feature has a negative impact on the prediction, we decided to omit it for later stages.
+As expected, The metrics shown in \autoref{fig:feature-pre-elim-metrics} demonstrate that the id feature has a negative impact on the prediction, we decided to omit it for later stages.
 
 \subsubsection{Exploiting Feature Space with Kernel Tricks}
 
@@ -96,7 +96,7 @@ In this subsection we employ a variety of kernels for our SVC model (using kerne
 
 First, an assumption is made that the feature space before extracting more features should be linearly separable.
 To prove this, several experiments using SVC with 3 kernel types, rbf \cite{x1}, polynomial and sigmoid, are conducted.
-It turns out, based on the results shown in table \autoref{fig:rbf-kernel-tricks} and \autoref{fig:poly-kernel-tricks}, this is indeed the case that the linear kernel outperforms other 2 non-linear kernels using only basic features serialized from the original dataset.
+It turns out, based on the results shown in \autoref{fig:rbf-kernel-tricks} and \autoref{fig:poly-kernel-tricks}, this is indeed the case that the linear kernel outperforms other 2 non-linear kernels using only basic features serialized from the original dataset.
 Our assumption holds so far.
 Furthermore, based on the training set accuracy, the SVC with \verb|poly| kernel seems to have overfitted and the overall standard deviation of the predictions is quite high.
 
@@ -104,7 +104,7 @@ Furthermore, based on the training set accuracy, the SVC with \verb|poly| kernel
 
 Without using any NLP-related features, the performance of the prediction is about 50 - 60\% accuracy if taking the variations into account. The current scores are by no means close to yielding a useful model. However, since the feature space is still rather naïve, exploring more features with natural language processing seems promising.
 
-To build our NLP component, we used one of the best performing NLP libraries at the moment, SpaCy \cite{x2,x3}. Since concrete entities are  reflected through the tweets, we will use these as central features and derive the other features from them. Following this protocol, we end up with 5 features : the entities themselves,  the labels/types of the entities, the words dependent on the entities (Part of speech), the positions of the entities in a sentence (Part of speech) and the derived words of the entities.
+To build our NLP component, we used one of the best performing NLP libraries at the moment, SpaCy \cite{x2,x3}. Since concrete entities are reflected through the tweets, we will use these as central features and derive the other features from them. Following this protocol, we end up with 5 features : the entities themselves,  the labels/types of the entities, the words dependent on the entities (Part of speech), the positions of the entities in a sentence (Part of speech) and the derived words of the entities.
 
 \subsubsection{SVC - The Second Try}
 Having the previous performances on hand, more experiments were undertaken using SVC.
@@ -141,14 +141,14 @@ Let’s deviate slightly from the statistical math heavy illustrations and turn 
   \label{fig:decision-tree}
 \end{figure}
 
-As you can see, a tree is a collection of if-then conditional rules to reach a binary decision “yes-no” (we only illustrated  binary classification
+As you can see, a tree is a collection of if-then conditional rules to reach a binary decision “yes-no” (we only illustrated binary classification
 for our purpose, but it can also classify labels) \cite{6}.
 
 For our purpose, we are using decision trees in an ensemble, more accurately, a random forest, one of the most famous bagging methods, particularly famous for feature selection, a deciding factor in our decision to conduct experiments using this method.
 This model works by spawning multiple decision trees each with a random subset of features and training data, it then pools the predictions together
 and takes the average, take this as a multitude of humans making predictions about a specific matter, if the matter is hardly predictable, pooling and
 averaging predictions can help reach a more precise result \cite{10}.
-The prediction results using the Random Forest classifier with our current limited set of 9 features are demonstrated in tables
+The prediction results using the Random Forest classifier with our current limited set of 9 features are demonstrated in figures
 \autoref{fig:20-trees}, \autoref{fig:200-trees}, and \autoref{fig:500-trees} in the appendix.
 
 As the results show in the tables, using the random forest method improves the accuracy to about 68\% which is the most promising result we have so far.
@@ -159,7 +159,7 @@ For this reason, we decided in the following experiments, that a maximum depth f
 \subsection{Feature Post-processing: selecting the right features}
 At this stage, lots of features have been extracted and utilised.
 As elaborated in the data preprocessing section, both quality and quantity of the features play a vital role in the classification process.
-Therefore, we decided to conduct feature post-processing  before adding more features.
+Therefore, we decided to conduct feature post-processing before adding more features.
 
 \subsubsection{Imputation and Feature Importance}
 
@@ -183,7 +183,7 @@ Originally, 38278 features including all text data have been used in previous ex
 After inserting a polynomial order-two feature generator, the number of features of each data point is extended to 767869266 (about 770 million).
 However, when feeding this amount of features into the random forest (our current best model) the training process could not be accomplished after 5
 hours of training in the supercomputer DAS5 \cite{x5}, we thus decided to go with the SVC model with the rbf kernel.
-The result is shown in table \autoref{fig:svc-rbf-kernel} in the appendix.
+The result is shown in \autoref{fig:svc-rbf-kernel} in the appendix.
 
 To our surprise, the performance did not improve as expected.
 Therefore, we conclude that more features do help in terms of the classification only if the added features are relevant and carefully selected.
@@ -193,11 +193,11 @@ Finally, after several experiments, the ideal computational models that fit into
 At this final stage, we will make use of all NLP features described in \autoref{tab:feature-stats} together with the 5 entity-related features to evaluate the models.
 
 \subsubsection{The Black-Box - Neural Net }
-Before our final run of  the Random Forest model, it would be really interesting to see how all the features perform in a black-box neural network.
+Before our final run of the Random Forest model, it would be really interesting to see how all the features perform in a black-box neural network.
 We thus chose the most straightforward NN method, Multi-layer Perceptron (MLP) classifier \cite{x6} to see whether there would be any promising results.
 Again we provide a usability case study \cite{8} on why this model would be a promising choice. The results of this experiment are shown in \autoref{fig:mlp-all-features} and \autoref{fig:mlp-all-features-2000} in the appendix.
 
-As illustrated in the resulting tables, there is indeed small performance gain by enlarging the neural  network.
+As illustrated in the resulting tables, there is indeed small performance gain by enlarging the neural network.
 However, considering the exponential increase of the training and evaluation time, we have to give up this method and stick with the Random Forest model.
 
 \subsubsection{Tuning Hyperparameters of the final model - Random Forest}
@@ -206,7 +206,7 @@ make tuning of these two parameters a stand-alone process by drawing the out-of-
 
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.3]{curve.png}
+  \includegraphics[scale=0.5]{curve.png}
   \caption{}
   \label{fig:curve}
 \end{figure}
@@ -243,4 +243,4 @@ The result of the random search is shown in \autoref{fig:base-random} in the app
 bootstrap': True}
 \end{verbatim}
 
-By comparing the base model of the random forest whose performance is shown in table \autoref{fig:random-hyper} in the appendix, an improvement on the cross-validation accuracy of about 3\% can be concluded and, perhaps most importantly, according to the training set accuracy, the tuned model less prone to be overfitting.
+By comparing the base model of the random forest whose performance is shown in \autoref{fig:random-hyper} in the appendix, an improvement on the cross-validation accuracy of about 3\% can be concluded and, perhaps most importantly, according to the training set accuracy, the tuned model less prone to be overfitting.

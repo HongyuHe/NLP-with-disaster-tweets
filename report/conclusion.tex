@@ -1,2 +1,11 @@
 \section{Conclusions}
-Out of all the models, Random Forests produce the best results (especially with hyperparameter tuning). This is due to the high accuracy and the short training times. The five-part pipeline serves as an excellent infrastructure for future experiments. The linear SVCs performed well, especially when the feature space is not linearly separable (baseline and non-baseline sections). Ensemble methods were beneficial when the results have high variance and bias. A higher number of features do help in terms of the classification only if the added features are relevant and carefully selected. While black-box methods hold a large amount of potential, the costs are very high compared to others.
+In conclusion, linguistic features extracted from the NLP pipeline do improve the classification of disaster tweets when compared to classically derivable features.
+We can conclude this because we extracted features from the text using an NLP pipeline, which yielded better results when compared to not doing so.
+This result was observed because the NLP pipeline can extract structure from the text; this structure is embedded in the parts-of-speech that are in a tweet and the entities that are referred to.
+ The NLP pipeline can also lemmatize words, which is useful for normalizing natural language for further processing.
+This structure is then given to the models in a format that they can work with (vectors), which they can then work with to generate results.
+Without these structures, the models are working with char arrays, which are ASCII values.
+The baseline method (Linear SVC) yielded a result of 62\% prediction accuracy, and if you compare this to the accuracy after including NLP features, then an increase is observable.
+This result is due to adding a small number of NLP-related features, but not all of them.
+According to the test set accuracy, the first noticeable result was that we achieved the highest observed score after adding the NLP features.
+Additionally, the test set accuracy is better than training accuracy because the overfitting issue did not occur due to the tuning of the hyperparameters (which limits the capacity of the tree model to overfit).
