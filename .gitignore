@@ -55,7 +55,6 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-build/
 develop-eggs/
 dist/
 downloads/
@@ -150,3 +149,5 @@ dmypy.json
 .pyre/
 
 # End of https://www.gitignore.io/api/jupyternotebooks,macos,python
+report/build/*
+!report/build/report.pdf

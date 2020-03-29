@@ -1,0 +1,53 @@
+\documentclass[10pt,notitlepage]{article}
+\usepackage[a4paper, top=0.6in, left=0.6in, right=0.6in, bottom=0.6in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage[style=ieee]{biblatex}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\graphicspath{{images/}}
+\addbibresource{references.bib}
+
+\title{
+  {Real or Not: How Does the Use of Natural Language Processing Improve the Classification of Disaster Tweets?}\\
+  {\large Machine Learning, Group 97. Vrije Universiteit Amsterdam}
+}
+\author{
+  Hongyu He
+  \and Beata Haracewiat
+  \and Matthias Debernardini
+  \and Alexander Balgavy
+  \and Soufiane Jounaid
+}
+\date{\today}
+
+\begin{document}
+  \maketitle
+
+  \begin{abstract}
+    Twitter is home to 321 million active users from all over the world.
+    It is 36th on Alexa, and the verb ``tweet'' is now a mainstay in the English vernacular.
+    Today, when news breaks, it breaks first on twitter.
+    Often, when a disaster emerges, tweets begin to flood the Twittersphere about the situation.
+    For emergency dispatchers, becoming aware of an accident as it unfolds and proactively deploying resources to the location can have a profound impact on the collateral damage.
+    However, this necessitates the need for an intelligent system that can process and interpret tweets because no person or group of people can read and understand the constant stream of tweets.
+    Because these tweets are mainly composed of natural language, the intelligent system needs to process the natural language so that it can output actionable suggestions.
+  \end{abstract}
+
+  \input{introduction}
+  \input{method}
+  \input{experiments}
+  \input{results-and-evaluation}
+  \input{conclusion}
+  \input{discussion}
+
+  \printbibliography
+
+  \input{appendix}
+\end{document}
