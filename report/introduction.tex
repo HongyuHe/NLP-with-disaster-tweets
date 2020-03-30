@@ -1,0 +1,25 @@
+\section{Introduction}
+In this report, we describe the NLP (Natural Language Processing) pipeline to compete in the ``Real or Not? NLP with Disaster Tweets'' Kaggle competition.
+The goal of the competition is to decide, given a tweet, whether it pertains to a disaster or not.
+The NLP pipeline with the highest accuracy wins the competition.
+The prepared dataset was provided by Figure Eight Inc.
+and the pipeline consisted of Python libraries.
+
+\subsection{Hypothesis}
+Our research will focus on exploring the difference in the models’ performance depending on the feature set. Similar research has shown the potential
+of NLP feature extraction techniques to improve the predictions \cite{y1,y2,y3}.
+Thus, our research will focus on investigating the hypothesis: \textit{Linguistic features extracted using the natural language processing pipeline
+improve the classification of disaster tweets compared to classic derivable features.}
+
+\subsection{Approach}
+In order to investigate our hypothesis, we have decided on a structured approach.
+As the first step, we performed pre-processing on the provided training data, which included data analysis and data cleaning.
+This step consisted of investigating the class imbalance, dealing with missing values and seeking correlations between features and classes among others.
+Based on the latter we have built a set of features which could be potentially useful for the classification.
+These will be later used for the training pipeline.
+For model evaluation, cross-validation with 5 stratified folds was used.
+This ensured that every instance from the dataset has been used for the training at least once.
+Moreover, the folds contained approximately the same proportion of the target value as the original dataset.
+To form the final conclusions, we evaluated our models on the test data.
+The respective steps along with the reasoning are described in-depth in the following sections.
+

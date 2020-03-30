@@ -1,0 +1,147 @@
+\section{Method}
+\subsection{Data preprocessing}
+
+The dataset required some initial preprocessing.
+\autoref{tab:columns-null-counts} below shows the columns present in the training dataset, along with the amount of instances that did not have a value for the given column.
+The keyword is a word associated with (or representative of) a given instance, the location is optionally entered by the user when they are authoring a tweet, the text is the content of the tweet, and the target is the label of the tweet.
+
+\begin{table}[h!]
+  \centering
+  \vspace{1em}
+  \renewcommand{\arraystretch}{1.5}
+  \begin{tabular}{| l | c |}
+    \hline
+    \textbf{Column} & \textbf{Amount of instances with a null value for the column} \\ \hline
+    keyword & 61 \\ \hline
+    location & 2533 \\ \hline
+    text & 0 \\ \hline
+    target & 0 \\ \hline
+  \end{tabular}
+  \renewcommand{\arraystretch}{1}
+  \vspace{1em}
+  \caption{}
+  \label{tab:columns-null-counts}
+\end{table}
+
+
+The first observation we made was that out of the total 7613 instances, none of them were missing a target label.
+This meant that all of the data was usable for supervised training and validation.
+Furthermore, all instances have an entry for the text column, so this column would be useful for feature extraction.
+
+We then saw that 61 instances were missing a value for the keyword column, which is approximately 0.8\% of the whole dataset.
+Out of those 61 instances, 42 were labelled as positive and 19 as negative. Based on this, we decided to fill in the missing data by imputation: for the positive instances, we filled in the mode of the keyword for positive instances, and likewise for the negative instances. We reasoned that this was fine, as it would not really affect the dataset as a whole, since only a small percentage of the dataset had a missing value for that column. Furthermore, there was no significant difference between the amount of positive versus negative instances that had a missing value for `keyword'.
+
+In the case of the location, around one third of the instances had a null value for this column.
+Unfortunately, in this case it was not possible to do much: using the mode value for the location would not make sense, and we did not have enough other features which we could use to train a model to predict the location of an instance (predicting this from just the text would be difficult). Moreover, missing data for the location could also be expected in the real-world use case. Therefore, we decided to leave the empty values empty, and potentially create a model that could use the location values when present.
+
+Next, we had to deal with duplicate instances in the dataset.
+There were no strict duplicates (i.e. duplicates where every column was duplicated); however, there were 69 instances that contained repeated text values. Out of those 69 rows, 37 rows contained the same text, yet were labelled differently. As this would be confusing for our model during training, we decided to simply drop rows with duplicated labels, because we did not have a good method to keep only the rows that were labelled correctly (doing this manually could lead to errors caused by subjectivity). Dropping duplicate rows did not have a major impact on the size of the dataset, as the operation only removed 110 instances, or around 1.44\% of the data.
+
+Some cleaning of the text values was also necessary, as they contained HTML entities and abbreviations that would not be understood by our natural language processing (NLP) pipeline, but could still carry meaning.
+In particular, we replaced HTML entities (e.g. \verb|&amp;|) with their English-word equivalent (e.g. ``and''). We also expanded abbreviations to their full form, e.g. ``ER'' to ``emergency room''.
+
+Finally, we noted the class imbalance of the dataset, which is shown in \autoref{tab:class-imbalance}:
+
+\begin{table}[h!]
+  \centering
+  \vspace{1em}
+  \renewcommand{\arraystretch}{1.5}
+  \begin{tabular}{| l | l | p{0.4\linewidth} |}
+    \hline
+    \textbf{Class} & \textbf{Number of instances} & \textbf{As percentage of total number of instances} \\ \hline
+    1 (is a disaster) & 3198 & 42.62\% \\ \hline
+    0 (is not a disaster) & 4305 & 57.38\% \\ \hline
+  \end{tabular}
+  \renewcommand{\arraystretch}{1}
+  \vspace{1em}
+  \caption{}
+  \label{tab:class-imbalance}
+\end{table}
+
+There were approximately 14.76\% more negative instances than there were positive instances.
+The class imbalance problem arises when one class is represented by significantly more instances than the other class \cite{Japkowicz2002}.
+In our case, we decided that this distribution was tolerable and would not lead to a major problem, given the size of the data.
+
+\subsection{Extracting features from the text}
+
+Some of the columns, such as the keyword, would be immediately usable as a feature.
+However, the text still required further processing.
+
+Some of the text values contained character sequences that had special meanings when used on Twitter.
+For example, alphanumeric strings beginning with an ``@'' symbol are ``mentions'', and are used to directly refer to another user's Twitter account in a message.
+Alphanumeric strings beginning with a ``\#'' symbol are ``hashtags'', and are used to categorise a message (a user may add one or more categories which they deem fitting for their message).
+In our processing, we decided to also treat these two kinds of alphanumeric strings accordingly, as their presence could be a useful feature.
+
+Overall, we noted the presence of several kinds of entities in the text: mentions of relief organisations, mentions of news organisations, other mentions, hashtags, organisations (companies, agencies, institutions, etc.), geopolitical entities (countries, cities, states), and facility entities (buildings, airports, highways, bridges, etc.).
+For each mention present in a message, we also noted whether the mentioned user was a known news organisation (e.g.
+CNN, BBC) , or a known relief organisation (e.g.
+MSF, Oxfam), as this could be a good indicator of whether the message referred to a disaster.
+
+
+We checked whether the hashtags in a message and the message itself contained a synonym of the word ``disaster'' or ``accident''; we obtained these synonyms from Roget's 21st Century Thesaurus.
+These synonyms were split up into `levels': level 1 synonyms were synonyms deemed closer in meaning to the word `disaster', and level 2 were less similar.
+We also extracted the subject, verbs, and objects for each sentence in each message, as these three grammatical features are generally part of the
+independent clause, and are useful in determining the topic of a sentence or message \cite{nordquist}.
+Finally, we checked whether the text contains words that could be used to describe ‘damage’, such as `explode' or `rupture'.
+
+\subsection{Feature selection}
+After processing the data, some analysis was necessary to determine which features would be useful in a model.
+To begin, we computed for each potential feature the amount of messages that had a value for that feature; you can see the results in
+\autoref{tab:feature-stats} in the appendix.
+
+Some of the features we extracted do not occur very frequently in the dataset.
+For example, only 0.03\% of the tweets in the dataset have a hashtag that is a level 2 synonym of `disaster', which amounts to two tweets.
+The same is true for level 1 synonyms of `disaster', which occur in 0.12\% of the hashtags of the tweets (9 instances).
+This means that they may not be useful features to consider, as they do not occur very often in general.
+
+Similarly, mentions of news organisations and relief organisations do not occur very often either: they are contained in 0.95\% (71 instances) and 0.04\% (3 instances), respectively.
+One reason for this may be that the list of Twitter accounts that we are using is too limited, and the tweets in our dataset simply refer to other news or relief organisation accounts.
+Unfortunately, there is no straightforward way of compiling a fully complete list of such accounts.
+Moreover, these features may still be useful, as if they are present, they may immediately be a strong indicator of the labelling of the message; to determine whether this is the case, further analysis was necessary, as discussed below.
+
+When selecting features for inclusion in the model, we created plots and attempted to find potential correlations.
+Firstly, we looked at only the columns that were already provided in the dataset.
+For the keywords, we observed that generally, a keyword is not equally as often associated with positively labelled tweets as it is with negatively labelled tweets.
+This is shown in \autoref{fig:keywords-vs-target} in the appendix, which is an excerpt from the full plot: the turquoise section (representing the amount of positive instances) and the red section (representing the amount of negative instances) are rarely the same size.
+The full plot is not included here for brevity; nevertheless, this excerpt should serve to show that the keyword can be a good indicator of the label.
+There are some discrepancies that are worth mentioning, namely that different forms of the same word (e.g.
+noun, adjective, adverb, plural, singular) may indicate different class labels.
+For example, the keyword `deaths' generally indicates that an instance should be labelled as positive, whereas for keywords `death' and `dead', it is more likely that the instance is negative.
+This is probably because the English language contains many words whose meanings change depending on the context, or whether they are meant figuratively.
+
+The location column was not useful, for two reasons.
+Firstly, it is entered by the user, so it either may be spelled in an unusual way (e.g.
+``M!\$\$!\$\$!PP!" meaning ``Mississippi''), or even be a valid location.
+This is not trivial to clean or analyze, and due to time constraints, we did not investigate ways to do so.
+Secondly, there is no location present for one-third of the training dataset.
+Therefore, we decided not to consider this in our models.
+
+Although, as shown above, less than one percent of the dataset contained a direct mention of a news organisation's account, it could still be used as a feature.
+As can be seen in \autoref{fig:mentioned-news} in the appendix, if a message mentions a news organisation, it is more likely that it should be labelled as positive.
+Therefore, if present, we could potentially use this feature to predict a positive label for the instance.
+
+Next, we analyzed the presence of level 1 synonyms of `disaster'.
+As is shown in \autoref{fig:contains-l1} in the appendix, the difference is not that significant, but it is still somewhat more likely for the tweet to be labelled as positive when it contains a synonym than when it does not.
+Similar plots were created for level 2 synonyms and words relating to damage; these plots are omitted for brevity, but the results show that these two features would not be a good indicator of the instance being positive.
+
+We also observed that tweets labelled as positive have a higher number of recognised entities (geopolitical entities, organisations, and facilities) in the text.
+This can be seen in \autoref{fig:num-ents-vs-target} in the appendix, where if a tweet contains five or more entities, it becomes more likely that it is a positive instance.
+However, there are only a handful of tweets with seven or eight entities, so it is possible that this observed `relationship' may actually be a result of the small size of the training dataset.
+
+Finally, we investigated the role of hashtags in the classification of tweets.
+As we said above, not many hashtags contained synonyms of the word `disaster'.
+However, for those that did, it is clear from \autoref{fig:hashtags-contain-synonyms} in the appendix that they were mostly labelled as positive.
+
+
+We also considered the number of hashtags present in a tweet, and observed that as the number of hashtags increases, it is generally more likely that the tweet should be labelled as positive.
+However, this is not a clear relationship, as there are some outliers.
+\autoref{fig:num-hashtags-vs-target} and \autoref{fig:num-hashtags-vs-target-zoomed} in the appendix show the same plot, but \autoref{fig:num-hashtags-vs-target-zoomed} was zoomed in by plotting only tweets with four or more hashtags to make potential relationships more visible.
+These figures show that there is a higher proportion of positively labelled tweets that contain seven or more hashtags, but there are some outliers, such as at nine and eleven hashtags.
+Furthermore, similarly to the number of entities, it is important to consider that this apparent relationship may actually result from the small size of the training dataset.
+Nevertheless, the number of hashtags could still be a useful feature for label prediction.
+
+Another reason for the hashtags in a tweet to potentially be a useful feature is that the most popular hashtags for the labels differ significantly.
+As can be seen in \autoref{fig:top-30-hashtags-false} and \autoref{fig:top-30-hashtags-true} in the appendix, out of the 30 most commonly occurring hashtags in each class, only four are the same for positive (turquoise) and negative (red) instances.
+In addition, those four hashtags are relatively generic: ``best'', ``hot'', ``news'', and ``prebreak''.
+This means that if a specific hashtag occurs in a given text, it is a likely indicator of the label that should be predicted for that instance.
+

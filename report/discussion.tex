@@ -1,0 +1,30 @@
+\section{Discussion}
+In this report, we demonstrate the results of various machine learning models in the task of natural language classification.
+The end goal was to explore potential solutions to the problem of classifying tweets if they pertain to disasters or not.
+With some success, we demonstrated that this is possible but not with high levels of confidence.
+This lack of success stems from the problem statement being overly broad, in that it is not precisely clear what a disaster is and what is not.
+There is not an authoritative source of truth that defines what is and is not a disaster because the meaning of this word is different according to different people.
+Rightly so as different people have different perspectives and sets of values.
+For example, to Donald Trump, the North American Free Trade Agreement is a disaster.
+However, citizens of Mexico would say that it is an overwhelming success that has brought wealth and prosperity to their nation.
+So is NAFTA a disaster or not? To Americans that worked in Automotive part suppliers (brakes, engines, etc.) NAFTA was a disaster since it decreased the number of available jobs in the country, but the opposite is true for Mexico and other trading partners of the US.
+This begs the question, to whom would such an intelligent system serve? Americans? It could, but it would be unfair.
+Therefore the scope of this problem needs to be narrowed down to something more specific that is unquestionably objective.
+Without the problem adequately modeled, there is no set of equations that can consistently deliver accurate results for all cases.
+
+
+One way to improve this system is to target, for example, natural disasters or automotive accidents.
+An additional improvement would be to include a knowledge base that allows the system to understand that, for example, Kansas is situated in tornado valley, and so if a tweet becomes geotagged from Kansas, then it is more likely about a disaster.
+This knowledge-base could also have a memory, that if there is a known disaster occurring in a geographical area, then tweets from that area will be much more likely to be about a disaster.
+
+
+If this system were to be designed and implemented, then a thorough discussion about the acceptable level of risk associated with false positives and negatives.
+As in how costly would a mistake be from this system trying to classify tweets? It is conceivable that if the risks are low, then it does not warrant a machine learning solution and all the complexity that comes from it.
+Along this vein of discussion, perhaps no classifier is the best classifier.
+Twitter could conceivably reserve a keyword in their service to flag to some trivial system that a particular tweet is, in fact, about a disaster.
+If a user wants to let others know that they are in a disaster, then they can use it.
+This system could be abused or misused, but the same holds for the machine learning models.
+
+
+Regardless of the implementation, this system would be incredibly useful to organizations that dispatch critical resources to regions affected by disasters.
+Such a system would allow for a more automated and proactive process that could make the difference in having a memorable disaster or a mundane event.
