@@ -1,35 +1,35 @@
 id,keyword,location,text,entities,labels,ent_dep,ent_head,ent_pos,ent_children,target
-1,fatalities,unknown,Our Deeds are the Reason of this #earthquake May ALLAH Forgive us all,Deeds,PERSON,nsubj,are,AUX,Our,1
-4,fatalities,unknown,Forest fire near La Ronge Sask. Canada,"La Ronge Sask,Canada","FAC,GPE",ROOT,Canada,PROPN,None,1
-5,fatalities,unknown,All residents asked to 'shelter in place' are being notified by officers. No other evacuation or shelter in place orders are expected,None,None,None,None,None,None,1
-6,fatalities,unknown,"13,000 people receive #wildfires evacuation orders in California ","13,000,California","CARDINAL,GPE",pobj,in,ADP,None,1
-7,fatalities,unknown,Just got sent this photo from Ruby #Alaska as smoke from #wildfires pours into a school ,Ruby #Alaska,PERSON,None,None,None,None,1
-8,fatalities,unknown,#RockyFire Update => California Hwy. 20 closed in both directions due to Lake County fire - #CAfire #wildfires,"RockyFire,California Hwy,20,Lake County","PERSON,ORG,CARDINAL,GPE","compound,nummod","Update,.","PROPN,PUNCT",None,1
-10,fatalities,unknown,"#flood #disaster Heavy rain causes flash flooding of streets in Manitou, Colorado Springs areas","Manitou,Colorado Springs",GPE,pobj,in,ADP,None,1
-13,fatalities,unknown,I'm on top of the hill and I can see a fire in the woods...,None,None,None,None,None,None,1
-14,fatalities,unknown,There's an emergency evacuation happening now in the building across the street,None,None,None,None,None,None,1
-15,fatalities,unknown,I'm afraid that the tornado is coming to our area...,None,None,None,None,None,None,1
-16,fatalities,unknown,Three people died from the heat wave so far,Three,CARDINAL,nummod,people,NOUN,None,1
-17,fatalities,unknown,Haha South Tampa is getting flooded hah- WAIT A SECOND I LIVE IN SOUTH TAMPA WHAT AM I GONNA DO WHAT AM I GONNA DO FVCK #flooding,Haha South Tampa,PERSON,None,None,None,None,1
-18,fatalities,unknown,#raining #flooding #Florida #TampaBay #Tampa 18 or 19 days. I've lost count ,"#raining,#Florida,Tampa,18 or 19 days","MONEY,GPE,DATE",dobj,flooding,NOUN,"TampaBay,days,#",1
-19,fatalities,unknown,#Flood in Bago Myanmar #We arrived Bago,"Flood,Bago Myanmar","PERSON,GPE",nsubj,#,PROPN,"in,#",1
-20,fatalities,unknown,Damage to school bus on 80 in multi car crash #BREAKING ,80,CARDINAL,pobj,on,ADP,in,1
-23,fatalities,unknown,What's up man?,None,None,None,None,None,None,0
-24,fatalities,unknown,I love fruits,None,None,None,None,None,None,0
-25,fatalities,unknown,Summer is lovely,Summer,DATE,nsubj,is,AUX,None,0
-26,fatalities,unknown,My car is so fast,None,None,None,None,None,None,0
-28,fatalities,unknown,What a goooooooaaaaaal!!!!!!,None,None,None,None,None,None,0
-31,fatalities,unknown,this is ridiculous....,None,None,None,None,None,None,0
-32,fatalities,unknown,London is cool ;),London,GPE,nsubj,is,AUX,None,0
-33,fatalities,unknown,Love skiing,None,None,None,None,None,None,0
-34,fatalities,unknown,What a wonderful day!,a wonderful day,DATE,None,None,None,None,0
-36,fatalities,unknown,LOOOOOOL,None,None,None,None,None,None,0
-37,fatalities,unknown,No way...I can't eat that shit,None,None,None,None,None,None,0
-38,fatalities,unknown,Was in NYC last week!,"NYC,last week","ORG,DATE",pobj,in,ADP,None,0
-39,fatalities,unknown,Love my girlfriend,None,None,None,None,None,None,0
-40,fatalities,unknown,Cooool :),None,None,None,None,None,None,0
-41,fatalities,unknown,Do you like pasta?,None,None,None,None,None,None,0
-44,fatalities,unknown,The end!,None,None,None,None,None,None,0
+1,derailment,unknown,Our Deeds are the Reason of this #earthquake May ALLAH Forgive us all,Deeds,PERSON,nsubj,are,AUX,Our,1
+4,derailment,unknown,Forest fire near La Ronge Sask. Canada,"La Ronge Sask,Canada","FAC,GPE",ROOT,Canada,PROPN,None,1
+5,derailment,unknown,All residents asked to 'shelter in place' are being notified by officers. No other evacuation or shelter in place orders are expected,None,None,None,None,None,None,1
+6,derailment,unknown,"13,000 people receive #wildfires evacuation orders in California ","13,000,California","CARDINAL,GPE",pobj,in,ADP,None,1
+7,derailment,unknown,Just got sent this photo from Ruby #Alaska as smoke from #wildfires pours into a school ,Ruby #Alaska,PERSON,None,None,None,None,1
+8,derailment,unknown,#RockyFire Update => California Hwy. 20 closed in both directions due to Lake County fire - #CAfire #wildfires,"RockyFire,California Hwy,20,Lake County","PERSON,ORG,CARDINAL,GPE","compound,nummod","Update,.","PROPN,PUNCT",None,1
+10,derailment,unknown,"#flood #disaster Heavy rain causes flash flooding of streets in Manitou, Colorado Springs areas","Manitou,Colorado Springs",GPE,pobj,in,ADP,None,1
+13,derailment,unknown,I'm on top of the hill and I can see a fire in the woods...,None,None,None,None,None,None,1
+14,derailment,unknown,There's an emergency evacuation happening now in the building across the street,None,None,None,None,None,None,1
+15,derailment,unknown,I'm afraid that the tornado is coming to our area...,None,None,None,None,None,None,1
+16,derailment,unknown,Three people died from the heat wave so far,Three,CARDINAL,nummod,people,NOUN,None,1
+17,derailment,unknown,Haha South Tampa is getting flooded hah- WAIT A SECOND I LIVE IN SOUTH TAMPA WHAT AM I GONNA DO WHAT AM I GONNA DO FVCK #flooding,Haha South Tampa,PERSON,None,None,None,None,1
+18,derailment,unknown,#raining #flooding #Florida #TampaBay #Tampa 18 or 19 days. I've lost count ,"#raining,#Florida,Tampa,18 or 19 days","MONEY,GPE,DATE",dobj,flooding,NOUN,"TampaBay,days,#",1
+19,derailment,unknown,#Flood in Bago Myanmar #We arrived Bago,"Flood,Bago Myanmar","PERSON,GPE",nsubj,#,PROPN,"in,#",1
+20,derailment,unknown,Damage to school bus on 80 in multi car crash #BREAKING ,80,CARDINAL,pobj,on,ADP,in,1
+23,body%20bags,unknown,What's up man?,None,None,None,None,None,None,0
+24,body%20bags,unknown,I love fruits,None,None,None,None,None,None,0
+25,body%20bags,unknown,Summer is lovely,Summer,DATE,nsubj,is,AUX,None,0
+26,body%20bags,unknown,My car is so fast,None,None,None,None,None,None,0
+28,body%20bags,unknown,What a goooooooaaaaaal!!!!!!,None,None,None,None,None,None,0
+31,body%20bags,unknown,this is ridiculous....,None,None,None,None,None,None,0
+32,body%20bags,unknown,London is cool ;),London,GPE,nsubj,is,AUX,None,0
+33,body%20bags,unknown,Love skiing,None,None,None,None,None,None,0
+34,body%20bags,unknown,What a wonderful day!,a wonderful day,DATE,None,None,None,None,0
+36,body%20bags,unknown,LOOOOOOL,None,None,None,None,None,None,0
+37,body%20bags,unknown,No way...I can't eat that shit,None,None,None,None,None,None,0
+38,body%20bags,unknown,Was in NYC last week!,"NYC,last week","ORG,DATE",pobj,in,ADP,None,0
+39,body%20bags,unknown,Love my girlfriend,None,None,None,None,None,None,0
+40,body%20bags,unknown,Cooool :),None,None,None,None,None,None,0
+41,body%20bags,unknown,Do you like pasta?,None,None,None,None,None,None,0
+44,body%20bags,unknown,The end!,None,None,None,None,None,None,0
 48,ablaze,Birmingham,@bbcmtd Wholesale Markets ablaze http://t.co/lHYXEOHY6C,Wholesale Markets,ORG,None,None,None,None,1
 49,ablaze,Est. September 2012 - Bristol,We always try to bring the heavy. #metal #RT http://t.co/YAo1e0xngw,#metal #RT,MONEY,None,None,None,None,0
 50,ablaze,AFRICA,#AFRICANBAZE: Breaking news:Nigeria flag set ablaze in Aba. http://t.co/2nndBGwyEi,"AFRICANBAZE,Nigeria,Aba,http://t.co/2nndBGwyEi","PERSON,GPE,CARDINAL","ROOT,compound,pobj","AFRICANBAZE,flag,in,http://t.co/2nndBGwyEi","NOUN,ADP,X",":,#",1
@@ -8616,33 +8616,33 @@ http://t.co/J49xEuj7Ps",300,CARDINAL,nummod,car,NOUN,None,1
 10832,wrecked,London ,#FX #forex #trading Cramer: Iger's 3 words that wrecked Disney's stock http://t.co/7enNulLKzM,"3,Disney","CARDINAL,ORG","nummod,poss","words,http://t.co/7enNulLKzM","NOUN,PROPN",'s,0
 10833,wrecked,Lincoln,@engineshed Great atmosphere at the British Lion gig tonight. Hearing is wrecked. http://t.co/oMNBAtJEAO,"@engineshed Great,the British Lion,tonight","ORG,EVENT,TIME",npadvmod,@engineshed,ADJ,None,0
 10834,wrecked,unknown,Cramer: Iger's 3 words that wrecked Disney's stock - CNBC http://t.co/N6RBnHMTD4,"3,Disney,CNBC","CARDINAL,ORG","nummod,poss,dobj","words,CNBC,wrecked","NOUN,VERB","stock,'s,Disney,-",0
-10835,fatalities,unknown,Pic of 16yr old PKK suicide bomber who detonated bomb in Turkey Army trench released http://t.co/aaWZXykLES http://t.co/RsMvgDxRiv,"16yr old,PKK,Turkey Army","DATE,ORG",compound,bomber,NOUN,None,1
-10837,fatalities,unknown,These boxes are ready to explode! Exploding Kittens finally arrived! gameofkittens #explodingkittensÛ_ https://t.co/TFGrAyuDC5,Kittens,PERSON,nsubj,arrived,VERB,Exploding,0
-10839,fatalities,unknown,Calgary Police Flood Road Closures in Calgary. http://t.co/RLN09WKe9g,Calgary,GPE,"compound,pobj","Road,in","PROPN,ADP",None,1
-10840,fatalities,unknown,#Sismo DETECTADO #JapÌ_n 15:41:07 Seismic intensity 0 Iwate Miyagi JST #?? http://t.co/gMoUl9zQ2Q,"15:41:07 Seismic,0,Iwate Miyagi","ORG,CARDINAL,GPE",nummod,intensity,NOUN,None,1
-10841,fatalities,unknown,Sirens everywhere!,Sirens,ORG,ROOT,Sirens,NOUN,"everywhere,!",0
-10842,fatalities,unknown,BREAKING: #ISIS claims responsibility for mosque attack in Saudi Arabia that killed 13 http://t.co/VZ640XOSwj http://t.co/m2HpnOAK8b,"ISIS,Saudi Arabia,13","PERSON,GPE,CARDINAL","nsubj,dobj","claims,killed",VERB,#,1
-10843,fatalities,unknown,Omg earthquake,None,None,None,None,None,None,1
-10844,fatalities,unknown,SEVERE WEATHER BULLETIN No. 5 FOR: TYPHOON ÛÏ#HannaPHÛ (SOUDELOR) TROPICAL CYCLONE: WARNING ISSUED AT 5:00 PM 06... http://t.co/tHhjJw51PE Û_,"5,5:00 PM","CARDINAL,TIME",nummod,.,NOUN,None,1
-10846,fatalities,unknown,Heat wave warning aa? Ayyo dei. Just when I plan to visit friends after a year.,a year,DATE,None,None,None,None,1
-10847,fatalities,unknown,An IS group suicide bomber detonated an explosives-packed vest in a mosque inside a Saudi special forces headquarters killing 15 people.,"Saudi,15","NORP,CARDINAL","amod,nummod","headquarters,people",NOUN,None,1
-10848,fatalities,unknown,I just heard a really loud bang and everyone is asleep great,None,None,None,None,None,None,0
-10849,fatalities,unknown,A gas thing just exploded and I heard screams and now the whole street smells of gas ... ??,None,None,None,None,None,None,1
-10850,fatalities,unknown,NWS: Flash Flood Warning Continued for Shelby County until 08:00 PM Wednesday. http://t.co/nZ7ACKRrJi #tnwx,"Shelby County,08:00 PM Wednesday","GPE,TIME",None,None,None,None,1
-10851,fatalities,unknown,RT @LivingSafely: #NWS issues Severe #Thunderstorm Warnings for parts of #AR #NC #OK. Expect more trauma cases: http://t.co/FWqfCKNCQW,"Thunderstorm Warnings,#AR #NC","PERSON,MONEY",None,None,None,None,1
-10852,fatalities,unknown,#??? #?? #??? #??? MH370: Aircraft debris found on La Reunion is from missing Malaysia Airlines ... http://t.co/5B7qT2YxdA,"MH370,La Reunion,Malaysia Airlines","CARDINAL,ORG",ROOT,MH370,ADV,None,1
-10853,fatalities,unknown,Father-of-three Lost Control of Car After Overtaking and Collided #BathAndNorthEastSomerset http://t.co/fa3FcnlN86,None,None,None,None,None,None,1
-10854,fatalities,unknown,1.3 #Earthquake in 9Km Ssw Of Anza California #iPhone users download the Earthquake app for more information http://t.co/V3aZWOAmzK,"1.3 #Earthquake,http://t.co/V3aZWOAmzK","MONEY,GPE",pobj,for,ADP,"information,more",1
-10855,fatalities,unknown,Evacuation order lifted for town of Roosevelt: http://t.co/EDyfo6E2PU http://t.co/M5KxLPKFA1,"Roosevelt,http://t.co/M5KxLPKFA1","PERSON,ORG","pobj,npadvmod","of,lifted","ADP,VERB",None,1
-10859,fatalities,unknown,#breaking #LA Refugio oil spill may have been costlier bigger than projected http://t.co/5ueCmcv2Pk,LA Refugio,ORG,None,None,None,None,1
-10860,fatalities,unknown,a siren just went off and it wasn't the Forney tornado warning ??,Forney,ORG,compound,warning,NOUN,None,1
-10862,fatalities,unknown,Officials say a quarantine is in place at an Alabama home over a possible Ebola case after developing symptoms... http://t.co/rqKK15uhEY,Alabama,GPE,compound,home,ADV,None,1
-10863,fatalities,unknown,#WorldNews Fallen powerlines on G:link tram: UPDATE: FIRE crews have evacuated up to 30 passengers who were tr... http://t.co/EYSVvzA7Qm,"WorldNews,30","PERSON,CARDINAL","compound,nummod","Fallen,passengers","PROPN,NOUN","up,to,#",1
-10864,fatalities,unknown,on the flip side I'm at Walmart and there is a bomb and everyone had to evacuate so stay tuned if I blow up or not,Walmart,PERSON,pobj,at,ADP,None,1
-10866,fatalities,unknown,Suicide bomber kills 15 in Saudi security site mosque - Reuters via World - Google News - Wall ... http://t.co/nF4IculOje,"15,Saudi,World - Google News - Wall","CARDINAL,NORP,ORG","dobj,amod","kills,site","VERB,NOUN",None,1
-10867,fatalities,unknown,#stormchase Violent Record Breaking EF-5 El Reno Oklahoma Tornado Nearly Runs Over ... - http://t.co/3SICroAaNz http://t.co/I27Oa0HISp,El Reno Oklahoma Tornado Nearly Runs,ORG,None,None,None,None,1
-10869,fatalities,unknown,Two giant cranes holding a bridge collapse into nearby homes http://t.co/STfMbbZFB5,Two,CARDINAL,nummod,cranes,NOUN,None,1
-10870,fatalities,unknown,@aria_ahrary @TheTawniest The out of control wild fires in California even in the Northern part of the state. Very troubling.,"California,Northern","GPE,NORP","pobj,amod","in,part","ADP,NOUN",None,1
-10871,fatalities,unknown,M1.94 [01:04 UTC]?5km S of Volcano Hawaii. http://t.co/zDtoyd8EbJ,"M1.94,01:04,UTC]?5,Volcano Hawaii","PERSON,TIME,CARDINAL","ROOT,nummod,compound","M1.94,km","PROPN,NOUN",[,1
-10872,fatalities,unknown,Police investigating after an e-bike collided with a car in Little Portugal. E-bike rider suffered serious non-life threatening injuries.,Portugal,GPE,pobj,in,ADP,Little,1
-10873,fatalities,unknown,The Latest: More Homes Razed by Northern California Wildfire - ABC News http://t.co/YmY4rSkQ3d,Northern California,LOC,None,None,None,None,1
+10835,derailment,unknown,Pic of 16yr old PKK suicide bomber who detonated bomb in Turkey Army trench released http://t.co/aaWZXykLES http://t.co/RsMvgDxRiv,"16yr old,PKK,Turkey Army","DATE,ORG",compound,bomber,NOUN,None,1
+10837,body%20bags,unknown,These boxes are ready to explode! Exploding Kittens finally arrived! gameofkittens #explodingkittensÛ_ https://t.co/TFGrAyuDC5,Kittens,PERSON,nsubj,arrived,VERB,Exploding,0
+10839,derailment,unknown,Calgary Police Flood Road Closures in Calgary. http://t.co/RLN09WKe9g,Calgary,GPE,"compound,pobj","Road,in","PROPN,ADP",None,1
+10840,derailment,unknown,#Sismo DETECTADO #JapÌ_n 15:41:07 Seismic intensity 0 Iwate Miyagi JST #?? http://t.co/gMoUl9zQ2Q,"15:41:07 Seismic,0,Iwate Miyagi","ORG,CARDINAL,GPE",nummod,intensity,NOUN,None,1
+10841,body%20bags,unknown,Sirens everywhere!,Sirens,ORG,ROOT,Sirens,NOUN,"everywhere,!",0
+10842,derailment,unknown,BREAKING: #ISIS claims responsibility for mosque attack in Saudi Arabia that killed 13 http://t.co/VZ640XOSwj http://t.co/m2HpnOAK8b,"ISIS,Saudi Arabia,13","PERSON,GPE,CARDINAL","nsubj,dobj","claims,killed",VERB,#,1
+10843,derailment,unknown,Omg earthquake,None,None,None,None,None,None,1
+10844,derailment,unknown,SEVERE WEATHER BULLETIN No. 5 FOR: TYPHOON ÛÏ#HannaPHÛ (SOUDELOR) TROPICAL CYCLONE: WARNING ISSUED AT 5:00 PM 06... http://t.co/tHhjJw51PE Û_,"5,5:00 PM","CARDINAL,TIME",nummod,.,NOUN,None,1
+10846,derailment,unknown,Heat wave warning aa? Ayyo dei. Just when I plan to visit friends after a year.,a year,DATE,None,None,None,None,1
+10847,derailment,unknown,An IS group suicide bomber detonated an explosives-packed vest in a mosque inside a Saudi special forces headquarters killing 15 people.,"Saudi,15","NORP,CARDINAL","amod,nummod","headquarters,people",NOUN,None,1
+10848,body%20bags,unknown,I just heard a really loud bang and everyone is asleep great,None,None,None,None,None,None,0
+10849,derailment,unknown,A gas thing just exploded and I heard screams and now the whole street smells of gas ... ??,None,None,None,None,None,None,1
+10850,derailment,unknown,NWS: Flash Flood Warning Continued for Shelby County until 08:00 PM Wednesday. http://t.co/nZ7ACKRrJi #tnwx,"Shelby County,08:00 PM Wednesday","GPE,TIME",None,None,None,None,1
+10851,derailment,unknown,RT @LivingSafely: #NWS issues Severe #Thunderstorm Warnings for parts of #AR #NC #OK. Expect more trauma cases: http://t.co/FWqfCKNCQW,"Thunderstorm Warnings,#AR #NC","PERSON,MONEY",None,None,None,None,1
+10852,derailment,unknown,#??? #?? #??? #??? MH370: Aircraft debris found on La Reunion is from missing Malaysia Airlines ... http://t.co/5B7qT2YxdA,"MH370,La Reunion,Malaysia Airlines","CARDINAL,ORG",ROOT,MH370,ADV,None,1
+10853,derailment,unknown,Father-of-three Lost Control of Car After Overtaking and Collided #BathAndNorthEastSomerset http://t.co/fa3FcnlN86,None,None,None,None,None,None,1
+10854,derailment,unknown,1.3 #Earthquake in 9Km Ssw Of Anza California #iPhone users download the Earthquake app for more information http://t.co/V3aZWOAmzK,"1.3 #Earthquake,http://t.co/V3aZWOAmzK","MONEY,GPE",pobj,for,ADP,"information,more",1
+10855,derailment,unknown,Evacuation order lifted for town of Roosevelt: http://t.co/EDyfo6E2PU http://t.co/M5KxLPKFA1,"Roosevelt,http://t.co/M5KxLPKFA1","PERSON,ORG","pobj,npadvmod","of,lifted","ADP,VERB",None,1
+10859,derailment,unknown,#breaking #LA Refugio oil spill may have been costlier bigger than projected http://t.co/5ueCmcv2Pk,LA Refugio,ORG,None,None,None,None,1
+10860,derailment,unknown,a siren just went off and it wasn't the Forney tornado warning ??,Forney,ORG,compound,warning,NOUN,None,1
+10862,derailment,unknown,Officials say a quarantine is in place at an Alabama home over a possible Ebola case after developing symptoms... http://t.co/rqKK15uhEY,Alabama,GPE,compound,home,ADV,None,1
+10863,derailment,unknown,#WorldNews Fallen powerlines on G:link tram: UPDATE: FIRE crews have evacuated up to 30 passengers who were tr... http://t.co/EYSVvzA7Qm,"WorldNews,30","PERSON,CARDINAL","compound,nummod","Fallen,passengers","PROPN,NOUN","up,to,#",1
+10864,derailment,unknown,on the flip side I'm at Walmart and there is a bomb and everyone had to evacuate so stay tuned if I blow up or not,Walmart,PERSON,pobj,at,ADP,None,1
+10866,derailment,unknown,Suicide bomber kills 15 in Saudi security site mosque - Reuters via World - Google News - Wall ... http://t.co/nF4IculOje,"15,Saudi,World - Google News - Wall","CARDINAL,NORP,ORG","dobj,amod","kills,site","VERB,NOUN",None,1
+10867,derailment,unknown,#stormchase Violent Record Breaking EF-5 El Reno Oklahoma Tornado Nearly Runs Over ... - http://t.co/3SICroAaNz http://t.co/I27Oa0HISp,El Reno Oklahoma Tornado Nearly Runs,ORG,None,None,None,None,1
+10869,derailment,unknown,Two giant cranes holding a bridge collapse into nearby homes http://t.co/STfMbbZFB5,Two,CARDINAL,nummod,cranes,NOUN,None,1
+10870,derailment,unknown,@aria_ahrary @TheTawniest The out of control wild fires in California even in the Northern part of the state. Very troubling.,"California,Northern","GPE,NORP","pobj,amod","in,part","ADP,NOUN",None,1
+10871,derailment,unknown,M1.94 [01:04 UTC]?5km S of Volcano Hawaii. http://t.co/zDtoyd8EbJ,"M1.94,01:04,UTC]?5,Volcano Hawaii","PERSON,TIME,CARDINAL","ROOT,nummod,compound","M1.94,km","PROPN,NOUN",[,1
+10872,derailment,unknown,Police investigating after an e-bike collided with a car in Little Portugal. E-bike rider suffered serious non-life threatening injuries.,Portugal,GPE,pobj,in,ADP,Little,1
+10873,derailment,unknown,The Latest: More Homes Razed by Northern California Wildfire - ABC News http://t.co/YmY4rSkQ3d,Northern California,LOC,None,None,None,None,1
